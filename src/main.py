@@ -59,6 +59,7 @@ def update_user(id: int, user: schemas.User, db: Session = Depends(get_db)):
 	"""
 	** Comment in POST operation method above also applies here.
 	"""
+	
 	return update_existing_user(id, db, user)
 
 
