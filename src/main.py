@@ -55,6 +55,10 @@ def create_user(user: schemas.User, db: Session = Depends(get_db)):
 
 @app.put("/users/{id}", response_model=schemas.User)
 def update_user(id: int, user: schemas.User, db: Session = Depends(get_db)):
+
+	"""
+	** Comment in POST operation method above also applies here.
+	"""
 	return update_existing_user(id, db, user)
 
 
